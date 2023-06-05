@@ -1,15 +1,15 @@
 <template>
     <div class="main-body">
-        <home-view />
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-import HomeView from "@/views/HomeView.vue";
+// import HomeView from "@/views/HomeView.vue";
 // import Section4 from "@/views/Section4.vue";
     export default {
         components: {
-            HomeView
+            // HomeView
             // Section4
         }
     }

@@ -10,7 +10,7 @@
                 <nav class="main-nav">
                     <ul class="main-nav__items">
                         <li class="main-nav__item">
-                            <a href="packages/index.html">Packages</a>
+                            <router-link :to="{name: 'packages', params: {id: 1}}">Packages</router-link>
                         </li>
                         <li class="main-nav__item">
                             <a href="customers/index.html">Customers</a>
@@ -27,7 +27,7 @@
             </section>
             <section id="plan">
                 <h1 class="section-title">Choose Your Plan</h1>
-                <div>
+                <div class="plan__list">
                     <article class="plan">
                         <h1 class="plan__title">FREE</h1>
                         <h2 class="plan__price">$0/month</h2>
@@ -39,7 +39,7 @@
                             <li>Basic Support</li>
                         </ul>
                         <div>
-                            <button class="plan__button">CHOOSE PLAN</button>
+                            <router-link :to="{name: 'packages', params: {id: 1}}" class="plan__button">CHOOSE PLAN</router-link>
                         </div>
                     </article>
                     <article class="plan plan--highlight">
@@ -98,7 +98,7 @@
             </section>
         </div>
     </main>
-    <footer>
+    <footer class="main-footer">
         <nav>
             <ul>
                 <li>
@@ -122,6 +122,33 @@ export default {
 
 
 <style scoped>
+.main-footer {
+    background-color: black;
+    color: white;
+}
+
+.main-footer ul {
+    margin: 0;
+    list-style: none;
+    padding: 18px 0;
+}
+
+.main-footer li {
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer a:hover,
+.main-footer a:active {
+    color: lightblue;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -183,6 +210,12 @@ export default {
 
 #plan {
     background: white;
+}
+
+.plan__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 
 .section-title {
