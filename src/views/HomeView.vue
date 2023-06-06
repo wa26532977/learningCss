@@ -304,6 +304,8 @@ export default {
 /* inheritance has very low specificity */
 .main-header {
     background-color: green;
+    position: fixed;
+    width: 100%;
 }
 
 .main-header div {
