@@ -22,8 +22,8 @@
                 </nav>
             </header>
             <section id="product-overview">
-                <h1>Get the freedom you deserve</h1>
-                <h2>trying to test h2</h2>
+                <h1 class="slog-1">Get the freedom you deserve</h1>
+                <h2 class="slog-2">trying to test h2</h2>
             </section>
             <section id="plan">
                 <h1 class="section-title">Choose Your Plan</h1>
@@ -199,13 +199,20 @@ export default {
     margin: 10px auto;
 }
 
-
-
 #product-overview {
     background: url("../assets/new-york.jpg");
+    margin: 34px 0 0 0;
     width: 100%;
     height: 528px;
-    padding: 10px;
+    position: relative;
+
+}
+
+.slog-1 {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    margin: 0;
 }
 
 #plan {
@@ -306,6 +313,7 @@ export default {
     background-color: green;
     position: fixed;
     width: 100%;
+    top: 0;
 }
 
 .main-header div {

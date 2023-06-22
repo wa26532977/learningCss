@@ -1,0 +1,98 @@
+<template>
+    <div class="test-html">
+        <div class="test-body">
+            <div class="navigation">navigation</div>
+            <div class="headline">headline
+                <div class="image-1">image-1</div>
+                <div class="image-2">image-2</div>
+                <div class="image-3">image-3</div>
+            </div>
+            <div class="contact-us">contact-us</div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "StackingPosition"
+}
+</script>
+
+<style scoped>
+.test-html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+.test-body {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    height: 400px;
+}
+
+.navigation,
+.headline,
+.contact-us {
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+    position: fixed;
+}
+
+.headline div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 130px;
+}
+
+.navigation {
+    background: rgb(255, 109, 109);
+    top: 100px;
+    left: 100px;
+    width: 300px;
+}
+
+.headline {
+    background: rgb(77, 77, 248);
+    top: 150px;
+    left: 150px;
+    width: 270px;
+    height: 200px;
+    z-index: 1;
+}
+
+.contact-us {
+    background: rgb(69, 214, 69);
+    top: 180px;
+    left: 320px;
+    width: 180px;
+    z-index: 100;
+}
+
+.image-1 {
+    top: 200px;
+    left: 230px;
+    position: fixed;
+}
+
+.image-2 {
+    top: 230px;
+    left: 260px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.image-3 {
+    left: 300px;
+    top: 260px;
+    position: fixed;
+}
+</style>

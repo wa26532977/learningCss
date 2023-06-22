@@ -1,4 +1,5 @@
 <template>
+    <div class="background"></div>
     <header class="main-header">
         <div>
             <router-link :to="{name: 'home'}" class="main-header__brand">
@@ -23,23 +24,24 @@
         <section class="plus-plan__link" id="plus">
             <a href="#">
                 <h1>Our PLUS Plan</h1>
-                <h2>asdfasdfasdfsadfsdfsdfasdfasdf</h2>
+                <h2 class="plus__badge">RECOMMENDED</h2>
+                <h2 class="plan__h2">asdfasdfasdfsadfsdfsdfasdfasdf</h2>
                 <p>asdfsadfsdfasdfsadfsdfasdfasdfasdfasdfasdfsadf</p>
             </a>
         </section>
         <section class="free-plan__link" id="free">
             <a href="#">
                 <h1>Our FREE Plan</h1>
-                <h2>asdfasdfasdfsadfsdfsdfasdfasdf</h2>
-                <p>asdfsadfsdfasdfsadfsdfasdfasdfasdfasdfasdfsadf</p>
+                <h2 class="plan__h2">asdfasdfasdfsadfsdfsdfasdfasdf</h2>
+                <p>asdfsadfsd sdfsadfsdfasd fsadfsdfasdfasdfasdfassdfsadfsdfa sdfsadfsdfasdfas dfasdfassdfsadfsdfasdf sadfsdfasdfasdfasdfassdfsa dfsdfasdf sadfsdfasdfasdfasdfassdfsadfsdfasdfsadfsdfasdfasdfasdfas fasdfsadfsdfasdf asdfasdfas dfasdfsadf</p>
             </a>
         </section>
         <div class="clearfix"></div>
         <section class="premium-plan__link" id="premium">
             <a href="#">
                 <h1>Our PREMIUM Plan</h1>
-                <h2>asdfasdfasdfsadfsdfsdfasdfasdf</h2>
-                <p>asdfsadfsdfasdfsadfsdfasdfasdfasdfasdfasdfsadf</p>
+                <h2 class="plan__h2">asdfasdfasdfsadfsdfsdfasdfasdf</h2>
+                <p>asdfsadfsdfas dfsadfsdfas dfasdf asdfassdfsadfsdfasdfsadfsdfasdfasdfasdfassdfsadfsdfasdfsadfsdfasdfas dfasdfassdfsa dfsdfasdfsadfsdfasd fasdfasdfasdfasdfsadf</p>
             </a>
         </section>
     </main>
@@ -64,6 +66,18 @@ export default {
 </script>
 
 <style scoped>
+main {
+    margin: 50px 0 0 0;
+    padding: 10px 0 0 0;
+}
+.background {
+    background: url("../assets/plans-background.jpg");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 .plus-plan__link {
     background-color: #b9ecb9;
     border: 3px solid black;
@@ -71,6 +85,8 @@ export default {
     padding: 20px 10px 40px 10px;
     width: 80%;
     border-left: none;
+    position: relative;
+    z-index: 0;
 }
 
 .free-plan__link,
@@ -81,10 +97,11 @@ export default {
     padding: 20px 10px 40px 10px;
     width: 80%;
 }
+
 .plus-plan__link:hover,
 .free-plan__link:hover,
 .premium-plan__link:hover {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -97,14 +114,12 @@ export default {
 
 .plus-plan__link h1,
 .free-plan__link h1,
-.premium-plan__link h1{
+.premium-plan__link h1 {
     color: black;
     font-weight: bold;
 }
 
-.plus-plan__link h2,
-.free-plan__link h2,
-.premium-plan__link h2 {
+.plan__h2 {
     color: gray;
 }
 
@@ -116,6 +131,7 @@ export default {
     color: black;
     padding: 25px;
     margin: 0 20px 0 0;
+    font-size: 25px;
 }
 
 .premium-plan__link {
@@ -125,6 +141,7 @@ export default {
 .premium-plan__link h1 {
     color: white;
 }
+
 .clearfix {
     clear: both;
 }
@@ -182,6 +199,12 @@ export default {
 
 .main-header {
     background-color: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 16px;
+    z-index: 1;
 }
 
 .main-header div {
@@ -239,5 +262,17 @@ export default {
     color: red;
     background: white;
     border: none;
+}
+
+.plus__badge {
+    position: absolute;
+    right: 0;
+    top: 7%;
+    font-size: 12px;
+    color: white;
+    background: #ff5454;
+    padding: 10px;
+    margin: 20px;
+    z-index: 10;
 }
 </style>

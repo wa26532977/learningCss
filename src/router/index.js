@@ -21,6 +21,16 @@ const router = createRouter({
       path: "/packages/:id",
       name: "packages",
       component: () => import('../views/PackagesView.vue')
+    },
+    {
+      path: '/sticky',
+      name: "sticky",
+      component: () => import('../views/StickPosition.vue')
+    },
+    {
+      path: '/stacking',
+      name: 'stacking',
+      component: () => import('../views/StackingPosition.vue')
     }
   ]
 })
