@@ -31,7 +31,13 @@ const router = createRouter({
       path: '/stacking',
       name: 'stacking',
       component: () => import('../views/StackingPosition.vue')
+    },
+    {
+      path: '/customers',
+      name: 'customers',
+      component: () => import('../views/CustomersView.vue')
     }
+
   ]
 })
 

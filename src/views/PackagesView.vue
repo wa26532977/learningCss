@@ -1,25 +1,5 @@
 <template>
     <div class="background"></div>
-    <header class="main-header">
-        <div>
-            <router-link :to="{name: 'home'}" class="main-header__brand">
-                uHost
-            </router-link>
-        </div>
-        <nav class="main-nav">
-            <ul class="main-nav__items">
-                <li class="main-nav__item">
-                    <router-link :to="{name: 'packages', params: {id: 1}}">Packages</router-link>
-                </li>
-                <li class="main-nav__item">
-                    <a href="customers/index.html">Customers</a>
-                </li>
-                <li class="main-nav__item main-nav__item--cta">
-                    <a href="start-hosting/index.html">Start Hosting</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <section class="plus-plan__link" id="plus">
             <a href="#">
@@ -45,18 +25,6 @@
             </a>
         </section>
     </main>
-    <footer class="main-footer">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Support</a>
-                </li>
-                <li>
-                    <a href="#">Terms of Use</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
 </template>
 
 <script>
@@ -67,7 +35,7 @@ export default {
 
 <style scoped>
 main {
-    margin: 50px 0 0 0;
+    margin: 43px 0 0 0;
     padding: 10px 0 0 0;
 }
 .background {

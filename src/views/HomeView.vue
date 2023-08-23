@@ -1,26 +1,6 @@
 <template>
     <main>
         <div class="div-body">
-            <header class="main-header">
-                <div>
-                    <a href="index.html" class="main-header__brand">
-                        uHost
-                    </a>
-                </div>
-                <nav class="main-nav">
-                    <ul class="main-nav__items">
-                        <li class="main-nav__item">
-                            <router-link :to="{name: 'packages', params: {id: 1}}">Packages</router-link>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="customers/index.html">Customers</a>
-                        </li>
-                        <li class="main-nav__item main-nav__item--cta">
-                            <a href="start-hosting/index.html">Start Hosting</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
             <section id="product-overview">
                 <h1 class="slog-1">Get the freedom you deserve</h1>
                 <h2 class="slog-2">trying to test h2</h2>
@@ -98,18 +78,6 @@
             </section>
         </div>
     </main>
-    <footer class="main-footer">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Support</a>
-                </li>
-                <li>
-                    <a href="#">Terms of Use</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
 </template>
 
 <script>
@@ -154,8 +122,6 @@ export default {
 }
 
 /* Specificity order: inline > #id > class,atribute > tag elecment selector */
-.div-body {
-}
 
 #key-features {
     background-color: #ff1b68;
@@ -200,10 +166,19 @@ export default {
 }
 
 #product-overview {
-    background: url("../assets/new-york.jpg");
-    margin: 34px 0 0 0;
+    /*background-image: url("../assets/freedom.jpg");*/
+    /*!* auto is width, 100% is height, background-size: auto 100%*!*/
+    background-size: cover;
+    /*background: url("../assets/freedom.jpg") no-repeat left 50% bottom 50%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-origin: border-box;*/
+    /*background-clip: border-box;*/
+    background-image: linear-gradient(to left bottom, red, blue);
+    border: 5px dashed red;
+    margin: 43px 0 0 0;
     width: 100%;
     height: 528px;
+    padding: 10px;
     position: relative;
 
 }
@@ -309,69 +284,7 @@ export default {
 
 
 /* inheritance has very low specificity */
-.main-header {
-    background-color: green;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
 
-.main-header div {
-    display: inline-block;
-    padding: 5px 10px;
-}
-
-.main-header__brand {
-    display: inline-block;
-    text-decoration: none;
-    color: #0e4f1f;
-    font-weight: bold;
-    padding: 3px 0;
-}
-
-.main-nav {
-    text-align: right;
-    display: inline-block;
-    width: calc(100% - 80px);
-}
-
-.main-nav__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.main-nav__item {
-    display: inline-block;
-    margin: 0 16px;
-}
-
-.main-nav__item a {
-    text-decoration: none;
-    color: #0e4f1f;
-    font-weight: bold;
-    padding: 3px 0;
-}
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-    color: white;
-    border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a {
-    color: white;
-    background: red;
-    padding: 2px 16px;
-    border-radius: 8px;
-}
-
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
-    color: red;
-    background: white;
-    border: none;
-}
 
 
 </style>
